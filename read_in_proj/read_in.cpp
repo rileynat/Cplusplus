@@ -51,6 +51,9 @@ int main (int argc, char *argv[]) {
   string filename = (string)argv[1];
   ifstream in;
   in.open( filename.c_str() );
+    if (in.eof() ) {
+        cerr << "in fail" << endl;
+    }
   if (!in.is_open()) {
     cerr << "in failed" << endl;
     return 1;
